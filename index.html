@@ -1,210 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Pager: Mind Palace</title>
-    <style>
-        /* General page styles */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #121212; /* Dark background */
-            color: #e0e0e0; /* Light text */
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
+import React from "react";
+import { DepthFrame } from "./DepthFrame";
+import { DepthFrameWrapper } from "./DepthFrameWrapper";
+import { Div } from "./Div";
+import { DivWrapper } from "./DivWrapper";
+import "./style.css";
+import vector0 from "./vector-0.svg";
+import vector1 from "./vector-1.svg";
 
-        /* Container for centering content */
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #1e1e1e; /* Slightly lighter dark background for blocks */
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
-        }
+export const StitchDesign = () => {
+  return (
+    <div className="stitch-design">
+      <div className="depth-frame-28">
+        <div className="depth-frame-29">
+          <div className="depth-frame-30">
+            <div className="depth-frame-31">
+              <div className="depth-frame-32">
+                <div className="overlap-group-wrapper">
+                  <div className="overlap-group">
+                    <img className="vector" alt="Vector" src={vector0} />
 
-        /* Headings */
-        h1, h2, h3 {
-            color: #ffffff; /* White text for headings */
-            border-bottom: 2px solid #00aaff; /* Blue line under headings */
-            padding-bottom: 10px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            border-bottom: none; /* No line under the main heading */
-            margin-top: 0;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #bbbbbb; /* Light gray for subtitle */
-            margin-top: -10px;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-        }
-
-        h3 {
-            font-size: 1.3em;
-            border-bottom: none; /* No line under section subheadings */
-            color: #00aaff; /* Blue color for list subheadings */
-        }
-        
-        /* Lists */
-        ul {
-            list-style: none; /* Remove default markers */
-            padding-left: 0;
-        }
-
-        ul li {
-            background-color: #2a2a2a; /* Darker background for list items */
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid #00aaff; /* Blue left border */
-            transition: transform 0.2s ease, background-color 0.2s ease; /* Smooth transition on hover */
-        }
-        
-        ul li:hover {
-            transform: translateX(5px); /* Shift right on hover */
-            background-color: #333333; /* Slightly lighter background on hover */
-        }
-
-        /* Tech stack tags */
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap; /* Wrap to next line if needed */
-            gap: 10px; /* Space between tags */
-            margin-top: 15px;
-        }
-
-        .tech-tag {
-            background-color: #00aaff; /* Blue tag background */
-            color: #ffffff; /* White tag text */
-            padding: 5px 12px;
-            border-radius: 15px; /* Rounded corners */
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        /* Call to action block */
-        .cta {
-            background-color: #00aaff; /* Blue background */
-            color: #ffffff; /* White text */
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 40px;
-        }
-        
-        .cta p {
-            margin: 0;
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            color: #777777; /* Gray text for footer */
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1>Mind Palace</h1>
-            <p class="subtitle">One-Pager for MVP: A 3D Space for Your Ideas</p>
-        </header>
-
-        <main>
-            <section id="problem">
-                <h2>Problem</h2>
-                <p>Current note-taking and document applications (Notion, Evernote, Obsidian) are effective, but limited to a two-dimensional space. They fail to leverage **human spatial memory** — one of the most powerful memorization mechanisms, known since Ancient Greece as the "method of loci" or "memory palace."</p>
-            </section>
-
-            <section id="solution">
-                <h2>Our Solution</h2>
-                <p>We are building an application that brings knowledge organization into an intuitive **3D space**. Users will be able to create "mind palaces" — virtual rooms where each note, document, or idea is placed as an object in the environment. This allows for the creation of visual and spatial connections between data, improving retention and information systematization.</p>
-            </section>
-
-            <section id="mvp">
-                <h2>MVP — Fast Launch and Hypothesis Validation</h2>
-                <p>For rapid hypothesis validation and feedback collection, our MVP will focus on core functionality, ensuring **cross-platform compatibility** and high performance even on less powerful devices.</p>
-                <h3>Key MVP Features:</h3>
-                <ul>
-                    <li><b>3D Space:</b> One pre-designed minimalist room with navigation (walking, looking around).</li>
-                    <li><b>Note Creation:</b> Ability to create and edit notes in Markdown format.</li>
-                    <li><b>Spatial Placement:</b> Users can "pin" notes to walls and objects within the 3D scene.</li>
-                    <li><b>Interaction:</b> Simple selection and reading of notes on hover or click.</li>
-                    <li><b>Performance:</b> A web application optimized to run in a browser across most devices.</li>
-                </ul>
-            </section>
-            
-            <section id="audience">
-                <h2>Target Audience</h2>
-                <ul>
-                    <li>Students and researchers working with large volumes of study materials.</li>
-                    <li>Writers, screenwriters, and creative professionals for organizing ideas.</li>
-                    <li>Programmers and engineers for visualizing complex systems.</li>
-                    <li>Anyone seeking more effective ways to learn and manage knowledge.</li>
-                </ul>
-            </section>
-
-            <section id="tech-stack">
-                <h2>Proposed Technology Stack</h2>
-                <h3>Frontend</h3>
-                <div class="tech-stack">
-                    <span class="tech-tag">Three.js</span>
-                    <span class="tech-tag">React (with react-three-fiber)</span>
-                    <span class="tech-tag">JavaScript / TypeScript</span>
+                    <img className="img" alt="Vector" src={vector1} />
+                  </div>
                 </div>
-                <h3>Backend</h3>
-                <div class="tech-stack">
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express.js</span>
-                    <span class="tech-tag">PostgreSQL</span>
-                </div>
-                <h3>Infrastructure & Deployment</h3>
-                <div class="tech-stack">
-                    <span class="tech-tag">Vercel (for Frontend)</span>
-                    <span class="tech-tag">Heroku / DigitalOcean (for Backend)</span>
-                </div>
-            </section>
+              </div>
 
-            <section id="business-model">
-                <h2>Business Model (Freemium)</h2>
-                <h3>Free Tier</h3>
-                <p>Access to core functionality: two rooms (one large, one small) and unlimited notes. Ideal for exploration and personal use.</p>
-                <h3>Premium Tier</h3>
-                <p>Will include custom room creation, extended customization (textures, lighting, furniture), collaborative access, integrations, and advanced content types (videos, 3D models).</p>
-            </section>
-            
-            <section id="next-steps">
-                <h2>Next Steps</h2>
-                <div class="cta">
-                    <p>Let's discuss the details and begin prototype development. Our goal is to create the first working version within the next 2-3 months.</p>
-                </div>
-            </section>
-        </main>
-        
-        <footer>
-            <p>© 2025 Mind Palace. Concept.</p>
-        </footer>
+              <div className="depth-frame-33">
+                <div className="text-wrapper-10">Mind Palace</div>
+              </div>
+            </div>
+          </div>
 
+          <div className="depth-frame-34">
+            <div className="depth-frame-35">
+              <DepthFrame />
+              <DepthFrameWrapper />
+              <div className="depth-frame-36">
+                <div className="text-wrapper-11">Tech Stack</div>
+              </div>
+
+              <div className="depth-frame-37">
+                <p className="text-wrapper-12">
+                  Mind Palace is built using a robust and modern tech stack to
+                  ensure performance, scalability, and cross-platform
+                  compatibility. Our core technologies include:
+                </p>
+              </div>
+
+              <DivWrapper />
+              <div className="depth-frame-36">
+                <div className="text-wrapper-11">Business Model</div>
+              </div>
+
+              <div className="depth-frame-37">
+                <p className="text-wrapper-12">
+                  Mind Palace operates on a freemium model, offering a balance
+                  between accessibility and premium features:
+                </p>
+              </div>
+
+              <Div />
+              <div className="depth-frame-36">
+                <div className="text-wrapper-11">Next Steps</div>
+              </div>
+
+              <div className="depth-frame-37">
+                <p className="text-wrapper-12">
+                  Our immediate focus is on developing a functional prototype to
+                  showcase the core features of Mind Palace. We aim to have a
+                  working version within the next 2-3 months, allowing us to
+                  gather user feedback and refine the app&#39;s design and
+                  functionality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="depth-frame-38">
+            <div className="depth-frame-35">
+              <div className="depth-frame-39">
+                <div className="depth-frame-40">
+                  <p className="text-wrapper-13">
+                    © 2024 Mind Palace. All rights reserved.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-</body>
-</html>
+  );
+};
